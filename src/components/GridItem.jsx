@@ -1,19 +1,22 @@
 import React,{Fragment} from 'react'
+import { useToggleContext } from '../Context/Toggle'
 
-const GridItem = ({value,onClick,isDark}) => {
+const GridItem = ({value,isDark}) => {
 
 
-    const darkClass = isDark? "dark":""
-
+    const {darkClass}=useToggleContext()
+    const copy = async e=>   await navigator.clipboard.writeText(e.target.getAttribute('value'))
 
   return (
     <Fragment>     
                 <div  className="grid-item cursor" 
                     value={value}
                     style={{backgroundColor: value} }
-                    onClick= {onClick}>      
+                    onClick= {copy}>      
                 </div>   
-                <div className={`cursor grid-color-name ${darkClass}`} value={value} >
+                <div className={`cursor grid-color-name ${darkClass}`}
+                     value={value}
+                     onClick={copy} >
                   {value}
                 </div> 
     </Fragment>

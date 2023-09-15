@@ -1,7 +1,8 @@
 import React from 'react'
+import { useToggleContext } from '../Context/Toggle'
 
-const Title = ({isDark}) => {
-    const darkClass=isDark? 'dark':""
+const Title = () => {
+        const {darkClass}=useToggleContext()
   return (
     <h1 className={`title ${darkClass}`}>Shah's Color Scheme Picker </h1>
   )

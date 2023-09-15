@@ -1,6 +1,10 @@
 import React from 'react'
 import Switch from 'react-switch'
-const SwitchButton = ({isDark,toggleDark}) => {
+import { useToggleContext } from '../Context/Toggle'
+const SwitchButton = () => {
+
+    const {isDark,toggleDark}=useToggleContext()
+
   return (
     
     <label className={`switch-label flex-row space-between align-center ${isDark&&'dark'}`}>{isDark?'Dark':'Light' }

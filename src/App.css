@@ -99,9 +99,11 @@ h1,h2,h3,p,section,div,span,input,button,input,select,form{
   margin-block: 0;
   background-color: var(--white-primary);
 }
+
 .grid{
   display: grid; 
-  padding: 0;
+  padding-block: 0;
+  
 }
 .grid-item{
   grid-row: 1;
@@ -204,6 +206,9 @@ h1,h2,h3,p,section,div,span,input,button,input,select,form{
 .get-scheme-btn.dark{
   color: var(--white-primary);
   background-color: var(--gray-500);
+}
+.color-grid-section-container.dark{
+  background-color: var(--navy-secondary);
 }
 .grid-color-name.dark{
   color: var(--gray-300);
