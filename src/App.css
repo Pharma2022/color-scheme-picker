@@ -34,7 +34,7 @@ html{
 
 
 /* CSS Reset */
-h1,h2,h3,p,section,div,span,input,button,input,select{
+h1,h2,h3,p,section,div,span,input,button,input,select,form{
   margin: 0;
   padding: 0;
   outline: none;
@@ -144,11 +144,11 @@ h1,h2,h3,p,section,div,span,input,button,input,select{
 .form{
   gap:1rem;
   align-items: center;
-  padding-block: 1rem;
+  padding-block: .75rem;
 
 }
 .form{  
-  margin-block: 1rem;
+  margin-block:-0.75rem 1rem;
 }
 .form>*{
   min-height: 2.85rem;
@@ -182,7 +182,7 @@ h1,h2,h3,p,section,div,span,input,button,input,select{
   font-size: .7rem;
   gap:.5rem;
   width: fit-content;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 
