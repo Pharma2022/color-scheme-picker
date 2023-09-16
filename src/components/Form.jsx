@@ -1,12 +1,13 @@
 import React , {useState} from 'react'
 import { useToggleContext } from '../Context/Toggle'
 import useForm from '../hooks/useForm'
+import { usePaletteContext } from '../Context/Palette'
 
-const Form = ({getScheme}) => {
+const Form = () => {
 
     const {darkClass}=useToggleContext()
-    const {color,colorScheme,handleChange}=useForm()
-   
+    
+    const {getScheme,color,colorScheme,handleChange}=usePaletteContext()
 
   return (
     <form onSubmit={getScheme} className="form container flex-row space-between">

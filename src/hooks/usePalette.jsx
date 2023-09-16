@@ -2,7 +2,10 @@ import {useState,useEffect} from 'react'
 import hexPlaceholderArray from '../data'
 import GridItem from '../components/GridItem'
 import { nanoid } from 'nanoid'
+import useForm from './useForm'
 const usePalette = () => {
+
+    const {color,colorScheme,handleChange}=useForm()
     const [palette,setPalette]=useState(hexPlaceholderArray)
     const [myPalette,setMyPalette]=useState(null)
     const getScheme= async (e)=>  {
@@ -20,7 +23,7 @@ const usePalette = () => {
             />))
 
       ),[palette])
-  return {palette,myPalette,getScheme}
+  return {palette,myPalette,getScheme,color,colorScheme,handleChange}
 }
 
 export default usePalette

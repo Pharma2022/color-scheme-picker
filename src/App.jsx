@@ -1,21 +1,17 @@
-import { Fragment, useEffect, useState } from 'react'
-import hexPlaceholderArray from './data'
-import './App.css'
-import GridItem from './components/GridItem'
-import Grid from './components/Grid'
-import { nanoid } from 'nanoid'
 
+import './App.css'
+import Grid from './components/Grid'
 import Form from './components/Form'
 import SwitchButton from './components/SwitchButton'
 import Title from './components/Title'
 import { useToggleContext } from './Context/Toggle'
-import usePalette from './hooks/usePalette'
+import { usePaletteContext } from './Context/Palette'
 
 
 function App() {
 
       const {darkClass}=useToggleContext()
-      const {myPalette,getScheme}=usePalette()
+      const {myPalette}=usePaletteContext()
 
      
           return (
@@ -25,7 +21,7 @@ function App() {
                   <Title />
                   <SwitchButton />
                 </div>
-                <Form getScheme={getScheme}/>
+                <Form/>
               </section>
               <Grid>
                 {myPalette}
