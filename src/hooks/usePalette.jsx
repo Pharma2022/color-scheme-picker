@@ -3,6 +3,8 @@ import hexPlaceholderArray from '../data'
 import GridItem from '../components/GridItem'
 import { nanoid } from 'nanoid'
 import useForm from './useForm'
+
+
 const usePalette = () => {
 
     const {color,colorScheme,handleChange}=useForm()

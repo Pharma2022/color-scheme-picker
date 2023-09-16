@@ -1,7 +1,7 @@
 import React,{Fragment} from 'react'
 import { useToggleContext } from '../Context/Toggle'
 
-const GridItem = ({value,isDark}) => {
+const GridItem = ({value}) => {
 
 
     const {darkClass}=useToggleContext()

@@ -1,6 +1,5 @@
-import React , {useState} from 'react'
+import React from 'react'
 import { useToggleContext } from '../Context/Toggle'
-import useForm from '../hooks/useForm'
 import { usePaletteContext } from '../Context/Palette'
 
 const Form = () => {
